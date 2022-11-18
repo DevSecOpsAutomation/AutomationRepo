@@ -1,5 +1,6 @@
 provider "aws" {
   region     = "us-west-1"
+
 }
 
 resource "aws_security_group" "Scenario2" {
@@ -10,14 +11,14 @@ resource "aws_security_group" "Scenario2" {
   ingress {
     from_port   = 389
     to_port     = 389
-    protocol    = "tcp"
+    protocol    = "Tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
     from_port   = 389
     to_port     = 389
-    protocol    = "udp"
+    protocol    = "Udp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
