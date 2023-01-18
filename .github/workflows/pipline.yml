@@ -11,7 +11,7 @@ jobs:
       image: docker://public.ecr.aws/algosec/connectivity-risk-analysis:latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3=
+        uses: actions/checkout@v3
       - name: Connectivity Risk Analysis
         run: iac-risk-analysis
         env:
