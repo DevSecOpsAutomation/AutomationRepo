@@ -8,7 +8,7 @@ jobs:
     name: 'Algosec IAC Connectivity Risk Analysis'
     runs-on: ubuntu-latest
     container: 
-      image: docker://public.ecr.aws/algosec/connectivity-risk-analysis:latest
+      image: docker://public.ecr.aws/algosec/connectivity-risk-analysis:1.0.22
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -16,7 +16,7 @@ jobs:
         run: iac-risk-analysis
         env:
           STOP_WHEN_FAIL: true
-          FULL_ANALYSIS: false
+          FULL_ANALYSIS: true
           USE_CHECKOUT: true
           ######
           CF_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
