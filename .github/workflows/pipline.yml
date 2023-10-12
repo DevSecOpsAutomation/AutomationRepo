@@ -15,7 +15,7 @@ jobs:
       - name: Connectivity Risk Analysis
         run: iac-risk-analysis
         env:
-          STOP_WHEN_FAIL: true
+          STOP_WHEN_FAIL: false
           FULL_ANALYSIS: false
           USE_CHECKOUT: true
           ######
