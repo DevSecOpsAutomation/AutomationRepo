@@ -1,3 +1,7 @@
+provider "google"{
+  project = "cloudflow-qa-gcp-1"
+}
+
 resource "google_compute_firewall" "fw-rule" {
   name      = "${var.network}-${var.name}"
   network   = "${var.network}"
